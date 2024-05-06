@@ -1,0 +1,81 @@
+<!--
+  ~ Copyright (c) 2021.  Control-J Pty Ltd
+  ~ All rights reserved
+  -->
+
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/content"
+            android:layout_height="match_parent">
+
+            <com.controlj.view.SlideViewLayout
+                android:id="@+id/slideview"
+                android:layout_marginStart="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                app:edges="ShortEdges"
+                app:leftFrac="0.10"
+                app:rightFrac="0.10">
+
+                <FrameLayout
+                    android:id="@+id/fragmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </FrameLayout>
+
+                <com.controlj.view.CViewWrapper
+                    android:id="@+id/navview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_green_50" />
+
+                <com.controlj.view.CViewWrapper
+                    android:id="@+id/soarview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_yellow_50"
+                    android:layout_gravity="bottom" />
+
+            </com.controlj.view.SlideViewLayout>
+
+        </FrameLayout>
+
+        <com.controlj.view.CJNavView
+            android:id="@+id/menuDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical|start"
+        android:id="@+id/left_anchor" />
+
+    <ProgressBar
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:id="@+id/busyIndicator"
+        android:layout_width="60dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_height="60dp" />
+
+</FrameLayout>

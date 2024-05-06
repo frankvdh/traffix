@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020.  Control-J Pty Ltd
+  ~ All rights reserved
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/callsign"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="ABCDE"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        tools:text="150km"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/altitude"
+        android:gravity="start"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        tools:text="1400ft"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/type"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        tools:text="Glider"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

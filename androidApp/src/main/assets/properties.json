@@ -1,0 +1,7 @@
+{
+  "radarSecret": "913c28254a4b4d0b96647802c4ada8fc",
+  "radarUrl": "https://server.trackdirect.net/radar/",
+  "mapboxToken": "pk.eyJ1IjoiY2x5ZGVwcyIsImEiOiJjaWthbzZ1YzUwbTg2dXhrcG56Mm5nOW14In0.i719JMp_JtUQjyI88AWnMA",
+  "mapStyle": "mapbox://styles/clydeps/cjz0dj87e06n01cmxwzlbxw4c",
+  "satelliteSource": "https://api.mapbox.com/v4/mapbox.satellite.json"
+}

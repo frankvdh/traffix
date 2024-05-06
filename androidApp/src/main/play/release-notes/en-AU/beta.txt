@@ -1,0 +1,1 @@
+* Reduce minimum Android version to 5.0

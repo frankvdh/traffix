@@ -1,0 +1,70 @@
+{
+  "layer_frequency_areas": [
+    "area-frequencies",
+    "area frequency labels"
+  ],
+  "layer_forecast_areas": [
+    "forecast areas",
+    "forecast area labels"
+  ],
+  "layer_airspace_r": [
+    "airspace R",
+    "airspace R 3D",
+    "airspace R-us",
+    "airspace R labels-us",
+    "airspace R labels"
+  ],
+  "layer_airspace_e": [
+    "airspace E",
+    "airspace E 3D",
+    "airspace E labels"
+  ],
+  "layer_waypoints_ifr": [
+    "ifr wpts",
+    "iwr wpts"
+  ],
+  "layer_waypoints_vfr": [
+    "vfr waypoints"
+  ],
+  "layer_ndbs": [
+    "ndbs"
+  ],
+  "layer_vors": [
+    "vors"
+  ],
+  "layer_airports": [
+    "airfields",
+    "airports",
+    "controlled airports"
+  ],
+  "layer_airspace_d": [
+    "airspace D labels",
+    "airspace D 3D",
+    "airspace D",
+    "ctr d-us",
+    "ctr d",
+    "airspace D-us",
+    "airspace D-us 3D",
+    "airspace D labels-us"
+  ],
+  "layer_airspace_c": [
+    "airspace C",
+    "airspace C labels",
+    "ctr c",
+    "ctr c-us",
+    "airspace C-us",
+    "airspace C labels-us",
+    "airspace C labels-us SFC",
+    "airspace C-us 3D",
+    "airspace C 3D"
+  ],
+  "layer_airspace_b": [
+    "airspace B labels-us",
+    "airspace B-us",
+    "airspace B-us 3D",
+    "airspace B labels-us sfc"
+  ],
+  "layer_below": [
+    "aerialway"
+  ]
+}

@@ -1,0 +1,5 @@
+* Various bug fixes
+* Added Shutdown option
+* Added menu opener
+* Include GPGGA sentence to FLARM.
+* Include help screen

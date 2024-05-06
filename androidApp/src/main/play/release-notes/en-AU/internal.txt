@@ -1,0 +1,2 @@
+Play store initial release.
+Integrate with XCSoar by adding a FLARM device on UDP port 4353 in XCSoar's config/devices.

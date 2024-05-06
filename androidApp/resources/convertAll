@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Copyright (c) 2021.  Control-J Pty Ltd
+# All rights reserved
+#
+
+files=$@
+[ "$@"x == "x" ] &&  files="svg/*.svg"
+ConvertAndroid $files
+# ConvertIos $files

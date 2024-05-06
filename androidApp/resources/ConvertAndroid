@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# Copyright (c) 2021.  Control-J Pty Ltd
+# All rights reserved
+#
+
+files=$@
+[ "$@"x == "x" ] &&  echo No files to convert && exit
+echo "Converting $files" to Android PNG drawables
+androiddir=../src/main/res
+androidRes=( 
+    '1'
+    '3 / 2'
+    '2'
+    '3'
+    '4'
+)
+androidDirs=(
+    "mdpi"
+    "hdpi"
+    "xhdpi"
+    "xxhdpi"
+    "xxxhdpi"
+)
+
+version=1
+for i in $files
+do
+    width=`php width.php $i`
+    fname=`basename $i .svg`
+    echo $fname $width
+    rm -f $androiddir/drawable/$fname.xml
+    for idx in ${!androidRes[@]}
+    do
+        nwidth=`expr $width \* ${androidRes[$idx]}`
+        svgexport $i $androiddir/drawable-${androidDirs[$idx]}/${fname}.png $nwidth:$nwidth
+    done
+    
+done

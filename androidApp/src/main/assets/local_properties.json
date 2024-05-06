@@ -1,0 +1,5 @@
+{
+        "jdbc.driver.classname" : "org.sqldroid.SQLDroidDriver",
+        "jdbc.driver.url" :"jdbc:sqldroid"
+}
+

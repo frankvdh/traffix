@@ -1,0 +1,57 @@
+#!/bin/sh
+files=$@
+[ "$@"x == "x" ] &&  echo No files to convert && exit
+echo "Converting $files" to iOS imagesets
+iosdir=../resources/Images.xcassets/
+version=1
+iosRes=(
+    '1'
+    '2'
+    '3'
+)
+
+iosName=(
+    ""
+    "@2x"
+    "@3x"
+)
+    
+for i in $files
+do
+    width=`php width.php $i`
+    fname=`basename $i .svg`
+    echo $fname width=$width
+    target=$iosdir/$fname.imageset
+    mkdir -p $target
+    for idx in ${!iosRes[@]}
+    do
+        nwidth=`expr $width \* ${iosRes[$idx]}`
+        convert $i -background transparent -resize $nwidthx$nwidth ${target}/${fname}${iosName[$idx]}.png
+    done
+
+    cat > $target/Contents.json <<EOF
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "$fname.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "${fname}@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "${fname}@3x.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : $version,
+    "author" : "svgexport"
+  }
+}
+EOF
+done

@@ -1,0 +1,14 @@
+Receives ADSB traffic information via WiFi from a GDL90 source such as Stratux or SkyEcho.
+Traffic can be displayed on a map, and/or relayed via a network port to other apps on the same device.
+
+If you're a glider pilot using XCSoar on an Android device, this app will allow you to stream
+SkyEcho traffic data and GPS location to XCSoar. Since XCSoar does not natively read GDL90 format
+data, TraffiX receives data from a SkyEcho or other GDL90 source and converts it to FLARM format,
+then retransmits this via a UDP port.
+
+Then simply setting one of XCSoar's input devices to UDP, port 4353 and FLARM decoding will
+result in ADSB traffic being displayed inside XCSoar just like FLARM traffic.
+
+TraffiX will remain running in the background when XCSoar is active.
+
+For setup instructions see the help page inside the app, or https://www.control-j.com/TraffiX

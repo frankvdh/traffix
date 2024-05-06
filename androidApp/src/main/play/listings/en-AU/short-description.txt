@@ -1,0 +1,1 @@
+Display traffic from SkyEcho, Stratux or other GDL90 source, relay to XCSoar

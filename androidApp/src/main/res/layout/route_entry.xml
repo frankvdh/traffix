@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021.  Control-J Pty Ltd
+  ~ All rights reserved
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pointName"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="ABCDE"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/legDist"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                tools:text="150km"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/description"
+            android:gravity="start"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:layout_width="match_parent"
+            tools:text="Alpha Bravo Charlie"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.controlj.view.CViewWrapper
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        tools:src="@drawable/splash"
+        android:layout_height="60dp"
+        android:contentDescription="Waypoint image" />
+
+</LinearLayout>
