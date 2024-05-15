@@ -12,7 +12,7 @@ class Dependency(val prefix: String, val artifact: String, val version: String) 
 
 
 val PlayPlugin = Dependency("com.github.triplet.play", "", "3.7.0")
-val Applibs = Dependency("com.control-j.applibs", "common", "2.2.12-SNAPSHOT")
+val Applibs = Dependency("com.control-j.applibs", "common", "2.2.12")
 val ApplibsAndroid = Applibs.variant("android")
 val ApplibsIos = Applibs.variant("ios")
 
@@ -42,7 +42,7 @@ val Kotlin =
     Dependency("org.jetbrains.kotlin", "kotlin-stdlib-jdk8", System.getProperty("kotlinVersion"))
 val KotlinReflect = Kotlin.variant("kotlin-reflect")
 val KotlinPlugin = Dependency("org.jetbrains.kotlin", "kotlin-gradle-plugin", "1.8.20")
-val CJLog = Dependency("com.control-j.cjlog", "core", "2.3-SNAPSHOT")
+val CJLog = Dependency("com.control-j.cjlog", "core", "2.4")
 
 object AndroidApp {
     const val minSdkVersion = 21
