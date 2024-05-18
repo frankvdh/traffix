@@ -131,23 +131,9 @@ dependencies {
 val asciidocSourceDir = File(projectDir, "asciidoc")
 val htmlDestDir = File(projectDir, "src/main/assets/html")
 
-task("asciidoc") {
-    doLast {
-        asciidocSourceDir.listFiles { _, name -> name.endsWith(".adoc") }.forEach { src ->
-            val outputFile = File(htmlDestDir, src.name.replace(".adoc", ".html"))
-            exec {
-                workingDir(asciidocSourceDir)
-                executable("/opt/homebrew/bin/asciidoc")
-                args("-o", outputFile.absolutePath, src.absolutePath)
-            }
-        }
-    }
-}
-
-task<Copy>("copyImages") {
-    dependsOn("asciidoc")
+task<Copy>("asciidoc") {
     from(asciidocSourceDir) {
-        include("*.jpg", "*.png")
+        include("*.jpg", "*.png", "*.html")
     }
     into(htmlDestDir)
 }
@@ -157,7 +143,7 @@ tasks.whenTaskAdded {
         name.startsWith("mergeDebugAssets") ||
         name.startsWith("lintVitalAnalyzeRelease") ||
         name.startsWith("mergeReleaseAssets")) {
-        dependsOn("copyImages")
+        dependsOn("asciidoc")
     }
     if (name.startsWith("publish") && name.endsWith("Bundle"))
         finalizedBy(":incBuild")
